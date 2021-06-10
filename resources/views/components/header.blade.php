@@ -1,8 +1,8 @@
-<header class="p-3 mb-3 border-bottom bg-danger">
+<header class="p-3 mb-3 border-bottom bg-success">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <img width="5%"
-                src="https://png.pngtree.com/template/20191023/ourmid/pngtree-human-face-women-logo-design-template-illustration-image_321725.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Seal_of_the_Philippine_Army.svg/1200px-Seal_of_the_Philippine_Army.svg.png"
                 alt="">
             
         </div>
@@ -11,7 +11,7 @@
 <br>
             <nav class="navbar navbar-expand-lg navbar-light bg-redr">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">Logistics</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

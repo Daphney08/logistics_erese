@@ -1,6 +1,6 @@
 @php $active = 'distribution' @endphp
 @extends('layout.main')
-@section('title', 'Create Distribution')
+@section('title', 'Create distribution')
 @section('content')
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
@@ -15,35 +15,40 @@
                          <form class =" row g-3 " action="{{ URL::route('distribution.create.save') }}" method="post">
                             @csrf
 
-                            {{-- assets Input Field --}}
+                            {{-- distribution Input Field --}}
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Name</label>
-                                <input type="text" id="distribution" class="form-control" name="name" value="{{ old('name') }}" required>
-                            </div> 
-                            <div class="col-md-12">
-                                <label for="distribution" class="form-label">Description</label>
-                                <input type="text" id="distribution" class="form-control" name="description" value="{{ old('description') }}" required>
+                                <label for="distribution" class="form-label">Requestor Name</label>
+                                <input type="text" id="distribution" class="form-control" name="requestor_name" value="{{ old('requestor_name') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Category</label>
-                                <input type="text" id="distribution" class="form-control" name="category" value="{{ old('category') }}" required>
+                                <label for="distribution" class="form-label">Requestor Contact</label>
+                                <input type="number" id="distribution" class="form-control" name="requestor_contact" value="{{ old('requestor_contact') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Supplier id</label>
-                                <input type="number" id="distribution" class="form-control" name="supplier_id" value="{{ old('supplier_id') }}" required>
+                                <label for="distribution" class="form-label">Purpose</label>
+                                <input type="text" id="distribution" class="form-control" name="purpose" value="{{ old('purpose') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Storage id</label>
-                                <input type="number" id="distribution" class="form-control" name="storage_id" value="{{ old('storage_id') }}" required>
-                            </div> 
+                                <label for="distribution" class="form-label">Asset id</label>
+                                <input type="number" id="distribution" class="form-control" name="asset_id" value="{{ old('asset_id') }}" required>
                             </div> 
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Total Stocks</label>
-                                <input type="number" id="distribution" class="form-control" name="total_stocks" value="{{ old('total_stocks') }}" required>
-                            </div> 
+                                <label for="distribution" class="form-label">Quantity</label>
+                                <input type="number" id="distribution" class="form-control" name="quantity" value="{{ old('quantity') }}" required>
+                            </div>  
+                            <div class="col-md-12">
+                                <label for="distribution" class="form-label">Status</label>
+                                <select class="form-control" name="status" value="{{ old('status') }}" required>
+                                    <option selected>choose....</option>
+                                       <option>Proccesing</option>
+                                       <option>Declined</option>
+                                       <option>Destributed</option>
+                                 </select>
+                         </div> 
+                        </div> 
                             
                             
-                            {{-- End assets Input Field --}}
+                            {{-- End distribution Input Field --}}
                         
                             {{-- Submit and Cancel Button --}}
                             <div class="col-12">

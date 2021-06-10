@@ -30,7 +30,11 @@
                             </div> 
                             <div class="col-md-12">
                                 <label for="delivery" class="form-label">Status</label>
-                                <input type="text" id="delivery" class="form-control" name="Status" value="{{ $data->Status }}" required>
+                                <select class="form-control" name="status" required value="{{ $data->status }}">
+                                       <option selected>choose....</option>
+                                       <option>Delivered</option>
+                                       <option>Return</option>
+                                    </select>
                             </div> 
                             {{-- End delivery Input Field --}}
                         

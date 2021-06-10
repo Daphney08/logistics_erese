@@ -37,9 +37,15 @@
                                 <input type="number" id="distribution" class="form-control" name="quantity" required value="{{ $data->quantity }}">
                             </div> 
                             <div class="col-md-12">
-                                <label for="distribution" class="form-label">Status</label>
-                                <input type="text" id="distribution" class="form-control" name="status" required value="{{ $data->status }}">
-                            </div> 
+                            <label for="distribution" class="form-label">Status</label>
+                                <select class="form-control" name="status" required value="{{ $data->status }}">
+                                    <option selected>choose....</option>
+                                    <option>Processing</option>
+                                    <option>Declined</option>
+                                    <option>Distributed</option>
+                                 </select>
+                         </div> 
+                        </div> 
                             
                             
                             

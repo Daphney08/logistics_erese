@@ -19,7 +19,7 @@ class Assets extends Model
         'category',
         'supplier_id',
         'storage_id',
-        'total_stock'
+        'total_stocks'
           
      ];        
 

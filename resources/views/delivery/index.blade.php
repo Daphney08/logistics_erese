@@ -44,7 +44,7 @@
                                         <td>{{$x->distribution_id}}</td> 
                                         <td>{{$x->transportation_id}}</td>
                                         <td>{{$x->date_distributed}}</td> 
-                                        <td>{{$x->Status}}</td>                                      
+                                        <td>{{$x->status}}</td>                                      
                                       
                                       
                                         <td style="width: 200px;">

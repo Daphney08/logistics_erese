@@ -30,7 +30,11 @@
                             </div> 
                             <div class="col-md-12">
                                 <label for="delivery" class="form-label">Status</label>
-                                <input type="text"  id="delivery" name="Status" value="{{ old('Status') }}" required>
+                                <select class="form-control" name="status" value="{{ old('status') }}" required>
+                                       <option selected>choose....</option>
+                                       <option>Delivered</option>
+                                       <option>Return</option>
+                                    </select>
                             </div> 
                            
                             
