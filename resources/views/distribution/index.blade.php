@@ -49,9 +49,7 @@
                                         <td>{{$x->purpose}}</td> 
                                         <td>{{$x->asset_id}}</td>
                                         <td>{{$x->quantity}}</td> 
-                                        <td>{{ $status['processing']}}</td>
-                                      Declined
-                                      Distributed
+                                        <td>{{$x->status}}</td> 
                                         <td style="width: 200px;">
                                             <div class="btn-group" role="group">
                                                 <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
