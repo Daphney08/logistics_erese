@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use\App\Models\User;
 use\App\Models\Message;
 
-use Redirect, Storage, Login;
+use Redirect, Storage, Auth;
 
-class LoginController extends Controller
+class AuthController extends Controller
 {
 
     protected $request;
@@ -40,7 +40,7 @@ class LoginController extends Controller
 
     public function login_verify()
     {
-      $login = Login::attempt($this->request->except('_token'));
+      $login = Auth::attempt($this->request->except('_token'));
 
       if($login){
           return Redirect::route('app');
@@ -78,7 +78,7 @@ class LoginController extends Controller
     }
         public function logout()
         {
-            Login::logout();
+            Auth::logout();
 
             return Redirect::route('app.login');
         }
@@ -99,7 +99,7 @@ class LoginController extends Controller
         public function chat_send()
         {
             $this->request->merge([
-                'user_id' => Login::user()->id
+                'user_id' => Auth::user()->id
             ]);
 
             Message::create(

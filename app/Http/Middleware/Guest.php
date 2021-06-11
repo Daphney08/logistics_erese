@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Auth, Redirect;
 
-class User
+class Guest
 {
     /**
      * Handle an incoming request.
@@ -17,12 +17,12 @@ class User
      */
     public function handle(Request $request, Closure $next)
     {
-        
+
         //if logged in
         //Auth::check() returns true if the user
         //is logged in and false if not
-        if(!Auth::check()){
-            return Redirect::route('app.login');
+        if(Auth::check()){
+            return Redirect::route('app');
         }
         return $next($request);
     }
